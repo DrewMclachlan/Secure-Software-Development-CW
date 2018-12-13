@@ -1,0 +1,14 @@
+<h1>index</h1>
+{{ title }}
+{{ user }}
+<form method='post' action='/home/submit' enctype="multipart/form-data">
+    <input type='file' name='fileU'>
+    <input type='submit'>
+</form>
+
+<h1>Array Values</h1>
+<ul>
+    {{#contents}}
+        <li>{{.}}</li>
+    {{/contents}}
+</ul>

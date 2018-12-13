@@ -1,0 +1,43 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../public/stylesheets/style.css">
+</head>
+<h1>Code review</h1>
+
+
+
+<section>
+
+<p>The lanague that can be reviewed is HTML</p>
+<p>only .txt files can be uploaded. All other extentions are blocked</p>
+</section>
+<p>----------------------------</p>
+<br>
+<section>
+<ul>
+
+    {{#if errors}}
+    {{ errors }} !
+    {{/if}}
+</ul>
+</section>
+
+
+
+<form method='post' action='./home/submitfile' enctype="multipart/form-data">
+    <input type='file' name='fileU'>
+    <input type='submit'>
+</form>
+<br>
+<p>enter code by text:</p>
+<form id='test' method="post" action='./home/submittext' type="text">
+
+<textarea name='textI' rows="20" cols="80"form="test">
+Enter text here...</textarea>
+<input type='submit'>
+</form>
+
+
+<a href="./home/logout">Logout</a>
+</ul>
+</html>

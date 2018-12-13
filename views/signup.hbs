@@ -1,0 +1,69 @@
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Signup</title>
+</head>
+
+
+
+
+
+<body>
+
+
+
+
+
+<h1>
+    Signup
+</h1>
+    <h3>For security purposes: </h3>
+    <p>all fields can only contain letters and numbers</p>
+       <p> emails must be unqiue </p>
+        <p>passwords must over 8 characters</p>
+            <p>----------------------------</p>
+
+
+<div>
+
+    {{# if errors }}
+            <section>
+                <ul>
+                    {{# each errors }}
+                        <li>{{ this.msg }}</li>
+                    {{/each}}
+                    </ul>
+            </section>
+
+    {{/if}}
+    {{# if invemail }}
+
+      {{ invemail}} <p>already registered</p>
+        {{/if}}
+
+
+
+</div>
+
+<div>
+    <form action="/auth/signup" method="post">
+        <div>
+            <label>Username :</label>
+            <input type="text" name="username">
+        </div>
+        <div>
+            <label>Password : </label>
+            <input type="password" name="password">
+        </div>
+        <div>
+            <label for="">Email : </label>
+            <input type = "text" name="email">
+        </div>
+        <input type="submit" value="Signup">
+        <a href="/login">Login</a>
+    </form>
+</div>
+</body>
+
